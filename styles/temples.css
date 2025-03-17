@@ -131,7 +131,7 @@ footer {
 
 .page-title {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
+  justify-content: space-between; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
 }
 
