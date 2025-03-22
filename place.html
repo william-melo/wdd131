@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Work Project on tribute to Indonesia - The best country in the world"
+    />
+    <meta name="author" content="William Melo" />
+    <title>Indonesia - The Emerald of the Equator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/place.css" />
+    <script src="scripts/place.js" defer></script>
+  </head>
+  <body>
+    <div id="layout">
+      <header>
+        <h1>Indonesia</h1>
+      </header>
+      <div class="hero-container">
+        <picture>
+          <!-- Desktop image -->
+          <source
+            media="(min-width: 500px)"
+            srcset="images/indonesia-desktop.webp"
+            type="image/webp"
+          />
+          <!-- Mobile image -->
+          <source
+            media="(max-width: 767px)"
+            srcset="images/indonesia-mobile.webp"
+            type="image/webp"
+          />
+          <!-- Fallback image -->
+          <img
+            src="images/indonesia-desktop.jpg"
+            alt="Beautiful scenery of Indonesia"
+            class="hero-image"
+          />
+        </picture>
+
+        <!-- Data box (overlay on desktop, below image on mobile) -->
+        <div class="data-box">
+          <h2>Data</h2>
+          <div class="data-grid">
+            <div class="data-label">Area:</div>
+            <div class="data-value">1,904,569 sq km</div>
+
+            <div class="data-label">Population:</div>
+            <div class="data-value">275,773,800</div>
+
+            <div class="data-label">Capital:</div>
+            <div class="data-value">Jakarta</div>
+
+            <div class="data-label">Languages:</div>
+            <div class="data-value">Indonesian, 700+ local languages</div>
+
+            <div class="data-label">Currency:</div>
+            <div class="data-value">Indonesian Rupiah (IDR)</div>
+
+            <div class="data-label">Time Zone:</div>
+            <div class="data-value">UTC+7 to UTC+9</div>
+
+            <div class="data-label">Calling Code:</div>
+            <div class="data-value">+62</div>
+
+            <div class="data-label">Internet TLD:</div>
+            <div class="data-value">.id</div>
+          </div>
+        </div>
+
+        <!-- Weather box (overlay on desktop, below data on mobile) -->
+        <div class="weather-box">
+          <h2>Weather</h2>
+          <div class="weather-icon">
+            <!-- SVG icon for mobile view -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 64 64"
+              class="weather-svg"
+            >
+              <defs>
+                <linearGradient
+                  id="a"
+                  x1="26.75"
+                  y1="22.91"
+                  x2="37.25"
+                  y2="41.09"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0" stop-color="#f9d766" />
+                  <stop offset="1" stop-color="#f78f20" />
+                </linearGradient>
+              </defs>
+              <circle cx="32" cy="32" r="10.5" fill="url(#a)" />
+              <path
+                d="M32 15.71V9.5M32 54.5v-6.21M43.52 20.48l4.39-4.39M16.09 47.91l4.39-4.39M48.29 32h6.21M9.5 32h6.21M43.52 43.52l4.39 4.39M16.09 16.09l4.39 4.39"
+                fill="none"
+                stroke="#333"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="2"
+              />
+              <path
+                d="M41.69 46.75H22.31a5.34 5.34 0 01-1.05-10.58 8 8 0 0115.48 0 5.34 5.34 0 01-1.05 10.58z"
+                fill="#b9c1c6"
+              />
+            </svg>
+          </div>
+          <div class="weather-data">
+            <div class="weather-row">
+              <div class="weather-label">Temperature:</div>
+              <div class="weather-value">28 °C</div>
+            </div>
+            <div class="weather-row">
+              <div class="weather-label">Conditions:</div>
+              <div class="weather-value">Partly Cloudy</div>
+            </div>
+            <div class="weather-row">
+              <div class="weather-label">Wind:</div>
+              <div class="weather-value">12 km/h</div>
+            </div>
+            <div class="weather-row">
+              <div class="weather-label">Wind Chill:</div>
+              <div class="weather-value">27 °C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p></p>
+          <span id="copyright"></span> <span class="flower">⭐</span> William
+          Melo <span class="flower">⭐</span> Indonesia
+        </p>
+        <p>Last Modification: <span id="lastUpdated"></span></p>
+      </footer>
+    </div>
+  </body>
+</html>

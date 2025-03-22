@@ -1,0 +1,267 @@
+:root {
+  /* Color variables */
+  --primary-color:rgb(141, 71, 71); /* Red - from Indonesian flag */
+  --secondary-color: #ffffff; /* White - from Indonesian flag */
+  --accent-color:rgb(150, 87, 87); /* Green - representing Indonesia's lush landscapes */
+  --text-color: #333333;
+  --light-text: #ffffff;
+  --box-bg: rgba(255, 255, 255, 0.9);
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  /* Typography */
+  --font-family: "Poppins", sans-serif;
+  --heading-weight: 700;
+  --subheading-weight: 600;
+  --body-weight: 400;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--secondary-color);
+  min-height: 100vh;
+}
+
+#layout {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  text-align: center;
+  padding: var(--spacing-lg);
+  position: relative;
+  width: 100%;
+}
+
+header::after {
+  content: "";
+  display: block;
+  height: 10px;
+  background-color: var(--accent-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: var(--heading-weight);
+  margin: 0;
+}
+
+/* Hero Container */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Data Box Styles */
+.data-box {
+  background-color: var(--box-bg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--box-shadow);
+  z-index: 10;
+}
+
+.data-box h2 {
+  color: var(--accent-color);
+  font-weight: var(--subheading-weight);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--spacing-sm) var(--spacing-md);
+}
+
+.data-label {
+  font-weight: var(--subheading-weight);
+  text-align: right;
+}
+
+.data-value {
+  font-weight: var(--body-weight);
+}
+
+/* Weather Box Styles */
+.weather-box {
+  background-color: var(--box-bg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--box-shadow);
+  z-index: 10;
+}
+
+.weather-box h2 {
+  color: var(--accent-color);
+  font-weight: var(--subheading-weight);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+}
+
+.weather-icon {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.weather-svg {
+  width: 64px;
+  height: 64px;
+}
+
+.weather-data {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xs);
+}
+
+.weather-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--spacing-md);
+}
+
+.weather-label {
+  font-weight: var(--subheading-weight);
+  text-align: right;
+}
+
+.weather-value {
+  font-weight: var(--body-weight);
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  text-align: center;
+  padding: var(--spacing-md);
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.flower {
+  color: #ffc0cb;
+}
+
+/* Mobile Layout (default) */
+@media screen and (max-width: 767px) {
+  .hero-container {
+    height: auto;
+  }
+
+  .hero-image {
+    height: auto;
+  }
+
+  .data-box,
+  .weather-box {
+    position: static;
+    margin: 0;
+    width: 100%;
+  }
+
+  .weather-icon {
+    display: block;
+  }
+}
+
+/* Desktop Layout */
+@media screen and (min-width: 768px) {
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .data-box {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 350px;
+    max-width: 40%;
+  }
+
+  .weather-box {
+    position: absolute;
+    top: 350px;
+    right: 50px;
+    width: 350px;
+    max-width: 40%;
+  }
+
+  .weather-icon {
+    float: right;
+    margin-top: -40px;
+    margin-right: -20px;
+  }
+
+  .weather-data {
+    clear: both;
+  }
+}
+
+/* Large Desktop Layout */
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  main {
+    max-width: 1200px;
+    max.height: 100vh;
+    margin: 0 auto;
+  }
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .data-box,
+  .weather-box {
+    width: 400px;
+  }
+}
