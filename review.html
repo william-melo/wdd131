@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Product Review Confirmation - WDD 131 – Dynamic Web Fundamentals"
+        />
+        <meta name="author" content="William Melo" />
+        <title>Review Confirmation</title>
+        <link rel="stylesheet" href="styles/normalize.css" />
+        <link rel="stylesheet" href="styles/base.css" />
+        <link rel="stylesheet" href="styles/form.css" />
+        <script src="scripts/getdates.js" defer></script>
+        <script src="scripts/review.js" defer></script>
+        <style>
+            header {
+              background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+              padding: 1.5rem 2rem;
+              box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            }
+            header h1 {
+              color: white;
+              text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+              margin-bottom: 1rem;
+              font-size: 2.2rem;
+            }
+            nav ul li a {
+              color: white;
+              font-weight: bold;
+              transition: all 0.3s ease;
+              padding: 0.5rem 1rem;
+              border-radius: 50px;
+            }
+            nav ul li a:hover {
+              background-color: rgba(255,255,255,0.2);
+              transform: translateY(-2px);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Review Confirmation</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="form.html">Review a Product</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="confirmation-container">
+            <div class="confirmation-card">
+                <h2>Thank You for Your Review!</h2>
+                <p>Your feedback has been submitted successfully.</p>
+
+                <div class="review-details">
+                    <h3>Review Summary</h3>
+                    <div id="review-summary">
+                    </div>
+                </div>
+
+                <div class="review-counter">
+                    <p>
+                        You have submitted
+                        <span id="review-count">0</span> reviews.
+                    </p>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="form.html" class="btn">Submit Another Review</a>
+                    <a href="index.html" class="btn">Return to Home</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>
+                © <span id="currentYear"></span> - William Melo - The Great
+                Colombia
+            </p>
+            <p>Last updated: <span id="lastUpdated"></span></p>
+        </footer>
+    </body>
+</html>
